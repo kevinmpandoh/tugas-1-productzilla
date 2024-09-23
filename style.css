@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Helvetica Neue" , Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+#hero-spot {
+    padding: 40px 0 0;
+    position: relative;
+    overflow: hidden;
+    background: #222;
+}
+
+section {
+    display: block;
+}
+
+a {
+    color: #4183C4;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    display: block;
+    width: 169px;
+    margin: 0 auto;
+}
+
+#hero-spot h1 {
+    color: #fff;
+    max-width: 830px;
+    margin-top: 50px;
+}
+
+h1 {
+    margin : 90px auto 0 auto;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 60px;
+    text-align: center;
+}
+
+#hero-spot h2 {
+    color: #a7a7a7;
+    line-height: 1.5em;
+    max-width: none;
+    margin: 10px auto 60px;
+    font-size: 18px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 200;
+}
+
+.hero-spot h2 > a {
+    color: #dcdcdc;
+    text-decoration: underline;
+}
+
+.help-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #bbb;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#show-image {
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+.image-hero {
+    margin: 0 auto;
+    max-width: 100%;
+    
+}
+
+#tutorial {
+    padding-bottom: 20px;
+    text-align: center;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+#tutorial h1 {
+    max-width: 910px;
+    color:#333;
+}
+
+#tutorial h2 {
+    font-weight: 200;
+    line-height: 38px;
+    font-size: 21px;
+    margin: 40px auto 0;
+    max-width:740px;
+}
+
+#tutorial ul.tabs {
+    display: inline-block ;
+    margin: 45px auto 0;
+    font-size: 0;
+}
+
+ul.tabs li {
+    display: inline-block;
+    margin: 0;
+    font-size: 15px;
+}
+
+ul.tabs li:first-child a {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.tabs li:nth-child(2n) a {
+    margin: 0 -1px;
+}
+
+ul.tabs li:last-child a {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+ul.tabs li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f5f5f5;
+    color: #666;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    position: relative;
+    line-height: 1em;
+}
+
+ul.tabs li a.selected {
+    background: #327fc7;
+    border-color: #327fc7;
+    color: #fff;
+    z-index: 20;
+    outline: none;
+}
+
+.tutorial-list.active {
+    display: block;
+}
+
+ul.tutorial-list {
+    margin-top: 90px;
+    counter-reset: tutorialstep;
+}
+
+.wrapper {
+    /* position: relative; */
+    width: 980px;
+    margin: 0 auto;
+}
+
+#create-repo-step {
+    background: #fff url(/img/user-repo.png) right 0 no-repeat;
+    background-size: 446px 328px;
+}
+
+.tutorial-list .image-right {
+    padding-right: 440px;
+}
+
+.tutorial-list > li {
+    position: relative;
+    background-color: #fff;
+    margin: 0 0 70px 0px;
+    padding: 40px 0 60px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1;
+    
+}
+
+li#create-repo-step h4 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1em;
+}
+
+.tutorial-list .image-right p {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+.tutorial-list p {
+    margin: 30px 120px 30px;
+  
+}
+p {
+    margin: 15px 0 30px;
+    font-weight: 300;
+    line-height: 1.7em;
+}
+
+.tutorial-list > li::after {
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+    background-color: #327fc7;
+    border-radius: 200px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    z-index: 100;
+}
+
+.details {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.tutorial-list > li:not(.question)::after {
+    counter-increment: tutorialstep;
+    content: counter(tutorialstep);
+  }
+
+.tutorial-list > li::after {
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+    background-color: #327fc7;
+    border-radius: 200px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    text-align: center;
+    z-index: 100;
+}
+
+.tutorial-list .question {
+    text-align: center;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+.tutorial-list .question::after {
+    content: "?";
+}
+
+.terminal {
+    width: 700px;
+    margin: 30px auto 0 ;
+}
+
+.header {
+    height: 25px;
+    display: block;
+    border: 1px solid #9c9c9c;
+    border-bottom-color:#111;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background: -webkit-linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaa 100%);
+    text-align: center;
+    font-size: 13px;
+    line-height: 25px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+    color: #444;
+}
+
+.shell {
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-size: 17px;
+    line-height: 28px;
+    color: #eeeb82;
+    background-color: #3d3d3d;
+    overflow: hidden;
+    padding: 20px;
+    margin: 0;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    text-align: left;
+    display: block;
+}
+
+.tutorial-list .shell p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.path {
+    color: #71cfee;
+    user-select: none;
+    padding-right: 0.6em;
+}
+
+.prompt {
+    color: #d74d52;
+    user-select: none;
+    padding-right: 0.6em;
+}
+
+em {
+    font-style: italic;
+}
+
+.hero-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    text-align: center;
+    border: solid 1px #e5e5e5;
+    margin: 0 auto 15px;
+    display: block;    
+}
+
+#next-steps h1 {
+    margin: 90px auto 0 auto;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 60px;
+  text-align: center;
+  max-width: 910px;
+  color: #333;
+}
+
+div.hero-icon {
+    color: #4183C4;
+    width: 80px;
+    height: 80px;
+}
+
+a.hero-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    text-align: center;
+    border: solid 1px #e5e5e5;
+    margin: 0 auto 15px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+/* Next Step */
+ul.next-steps {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.wrapper {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.next-steps li {
+    
+    text-align: center;
+    padding: 0 20px 0;
+}
+
+.next-steps li:first-child, .next-steps li:last-child {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.next-steps .hero-icon {
+    margin-bottom: 35px;
+}
+
+.next-steps .hero-icon span {
+    display: flex;
+    margin: 20px auto;
+    line-height: 100px;
+    width: 50px;
+}
+
+footer {
+    position: relative;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #777;
+    width: 980px;
+    padding: 40px 0;
+    margin: 70px auto 0 auto;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-footer-links li:first-child {
+    margin-left: 0;
+}
+
+.site-footer-links li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .logo {
+        width: 100px;
+    }
+
+    #hero-spot h1 {
+        font-size: 24px;
+        line-height: 48px;
+    }
+
+    #tutorial h1 {
+        font-size: 24px;
+        line-height: 48px;
+    }
+
+    #tutorial h2 {
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+
+    ul.next-steps {  
+        flex-direction: column;
+      }
+
+      .terminal {
+        width: 200px;
+        margin: 30px auto 0 ;
+    }
+
+    li#create-repo-step h4 {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1em;
+    }
+
+    .tutorial-list .image-right p {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .tutorial-list > li::after {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 20px;
+        left: 5px;
+      }
+
+      #create-repo-step {
+        background: none;        
+      }
+
+      .wrapper {
+        width: 100%;
+        
+      }
+
+        .tutorial-list > li {
+            margin: 0 0 30px 0px;
+            padding: 20px 0 30px;
+            font-size: 14px;
+        }
+
+        .tutorial-list p {
+            margin: 20px 60px 20px;
+        }
+
+        .tutorial-list .shell p {
+            font-weight: bold;
+        }
+
+        .tutorial-list .image-right {
+            padding-right: 0;
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 1em;
+        }
+
+        #next-steps h1 {
+            font-size: 24px;
+            line-height: 48px;
+        }
+
+        .hero-icon {
+            width: 50;
+            height: 50px;
+        }
+
+        footer {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        footer ul.site-footer-links {
+            margin: 20px;
+        }
+
+
+
+   
+
+    
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 1 - Productzilla</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="home">
+    <section id="hero-spot" class="hero-spot">
+      <a href="/">
+        <img class="logo" src="./img/logo.svg" alt="GitHub Logo" />
+      </a>
+      <h1>Websites for you and your projects.</h1>
+      <h2>
+        Hosted direclty from your
+        <a href="https://github.com">GitHub repository</a>. Just edit, push, and
+        your changes are live.
+      </h2>
+      <a class="help-link" href="">Pages Help</a>
+      <div id="show-image">
+        <img
+          class="image-hero"
+          src="/img/microsoft.png"
+          alt="Microsoft"
+          width="893"
+        />
+      </div>
+    </section>
+
+    <section class="tutorial" id="tutorial">
+      <h1>
+        Ready to get started? Build your own site from scratch or generate one
+        for your project.
+      </h1>
+      <h2>
+        You get one site per GitHub account and organization, <br />
+        and unlimited project sites. Let's get started.
+      </h2>
+
+      <ul class="tabs">
+        <li>
+          <a href="#user-site" class="selected">User or organization site</a>
+        </li>
+        <li>
+          <a href="#project-site">Project site</a>
+        </li>
+      </ul>
+
+      <ul id="user-site" class="tutorial-list wrapper active">
+        <li id="create-repo-step" class="image-right">
+          <h4>Create a repository</h4>
+          <p>
+            Head over to <a href="https:github.com">Github</a> and
+            <a href="https://github.com/new">create a new public repository</a>
+            named <em>username</em>.github.io, where <em>username</em> is your
+            username (or organization name) on GitHub.
+          </p>
+          <p class="details">
+            If the first part of the repository doesn't exactly match your
+            username, it won't work, so make sure to get it right.
+          </p>
+        </li>
+        <li class="question">
+          <h4>What git client are you using</h4>
+          <ul class="tabs">
+            <li>
+              <a href="#terminal-step-1" id="option-terminal" class="selected"
+                >A terminal</a
+              >
+            </li>
+            <li>
+              <a href="/" id="option-desktop">GitHub Desktoip</a>
+            </li>
+            <li>
+              <a href="/" id="option-newuser">I don't Know</a>
+            </li>
+          </ul>
+        </li>
+        <li id="terminal-step-1" class="option-terminal">
+          <h4>Clone the repository</h4>
+          <p>
+            Go to the folder where you want to store your project, and clone the
+            new repository:
+          </p>
+          <div class="terminal">
+            <div class="header"></div>
+            <div class="shell">
+              <p>
+                <span class="path">~</span>
+                <span class="prompt">$</span>
+                git clone https://github.com/<em>username</em>/
+                <em>username</em>.github.io
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="option-terminal">
+          <h4>Hello World</h4>
+          <p>Enter the project folder and add an index.html file:</p>
+
+          <div class="terminal">
+            <div class="header"></div>
+            <div class="shell">
+              <p>
+                <span class="path">~</span><span class="prompt">$</span>cd
+                <em>username</em>.github.io
+              </p>
+              <p>
+                <span class="path">~</span><span class="prompt">$</span>echo
+                "Hello World" &gt; index.html
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="option-terminal">
+          <h4>Push it</h4>
+          <p>Add, commit, and push your changes:</p>
+
+          <div class="terminal">
+            <div class="header"></div>
+            <div class="shell">
+              <p>
+                <span class="path">~</span><span class="prompt">$</span>git add
+                --all
+              </p>
+              <p>
+                <span class="path">~</span><span class="prompt">$</span>git
+                commit -m "Initial commit"
+              </p>
+              <p>
+                <span class="path">~</span><span class="prompt">$</span>git push
+                -u origin main
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="option-all">
+          <h4>…and you're done!</h4>
+          <p>
+            Fire up a browser and go to
+            <strong>https://<em>username</em>.github.io</strong>.
+          </p>
+          <div class="hero-icon">
+            <span class=""
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 12.75 6 6 9-13.5"
+                />
+              </svg>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="next-steps">
+      <h1>
+        Now that you’re up and running, here are a few things you should know.
+      </h1>
+
+      <ul class="next-steps wrapper">
+        <li class="jekyll">
+          <a
+            class="hero-icon"
+            href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll"
+          >
+            <span class=""
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125"
+                />
+              </svg>
+            </span>
+          </a>
+          <h4>
+            <a
+              href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll"
+              >Blogging with Jekyll</a
+            >
+          </h4>
+          <p>
+            Using <a href="https://jekyllrb.com">Jekyll</a>, you can blog using
+            beautiful Markdown syntax, and without having to deal with any
+            databases.
+            <a href="https://jekyllrb.com/docs/">Learn how to set up Jekyll</a>.
+          </p>
+        </li>
+        <li class="custom-urls">
+          <a
+            class="hero-icon"
+            href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site"
+          >
+            <span class="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                />
+              </svg>
+            </span>
+          </a>
+          <h4>
+            <a
+              href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site"
+              >Custom URLs</a
+            >
+          </h4>
+          <p>
+            Want to use your own custom domain for a GitHub Pages site? Just
+            create a file named CNAME and include your URL.
+            <a
+              href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site"
+              >Read more</a
+            >.
+          </p>
+        </li>
+        <li class="guides">
+          <a class="hero-icon" href="https://docs.github.com/pages">
+            <span class="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+                />
+              </svg>
+            </span>
+          </a>
+          <h4><a href="https://docs.github.com/pages">Guides</a></h4>
+          <p>
+            Learn how to create custom 404 pages, use submodules, and
+            <a href="https://docs.github.com/pages"
+              >learn more about GitHub Pages</a
+            >.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <footer class="page-footer">
+      <ul class="site-footer-links right">
+        <li><a href="https://www.githubstatus.com/">Status</a></li>
+        <li><a href="https://docs.github.com/rest">API</a></li>
+        <li><a href="https://training.github.com">Training</a></li>
+        <li><a href="https://shop.github.com">Shop</a></li>
+        <li><a href="https://github.blog">Blog</a></li>
+        <li><a href="https://github.com/about">About</a></li>
+      </ul>
+
+      <a href="/">
+        <span style="width: 24px; display: inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+            />
+          </svg>
+        </span>
+      </a>
+
+      <ul class="site-footer-links">
+        <li>© 2024 <span>GitHub</span>, Inc.</li>
+        <li>
+          <a
+            href="https://docs.github.com/en/github/site-policy/github-terms-of-service"
+            >Terms</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://docs.github.com/en/github/site-policy/github-privacy-statement"
+            >Privacy</a
+          >
+        </li>
+        <li><a href="https://github.com/security">Security</a></li>
+        <li><a href="https://support.github.com">Contact</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
